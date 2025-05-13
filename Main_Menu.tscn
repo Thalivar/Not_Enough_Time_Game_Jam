@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfxmtqhgos0cs"]
+
+[sub_resource type="Theme" id="Theme_ishai"]
+HeaderLarge/font_sizes/font_size = 40
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main_Menu_Background" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = 256.0
+offset_right = 384.0
+offset_bottom = -72.0
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Play"
+
+[node name="Options" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Options"
+
+[node name="Credits" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Credits"
+
+[node name="Quit" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -280.0
+offset_top = 64.0
+offset_right = 232.0
+offset_bottom = 128.0
+grow_horizontal = 2
+theme = SubResource("Theme_ishai")
+theme_type_variation = &"HeaderLarge"
+text = "Echoes of Regret"
+horizontal_alignment = 1
+vertical_alignment = 1
