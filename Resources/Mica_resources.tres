@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://g33x6qhlr4g0"]
+
+[ext_resource type="Texture2D" uid="uid://de38hris4r3ck" path="res://Not_Enough_Time_Game_Jam/Sprites/placeholder.png" id="1_p6qhe"]
+[ext_resource type="Script" uid="uid://uj6qckvscgx3" path="res://Not_Enough_Time_Game_Jam/Character.gd" id="2_njign"]
+[ext_resource type="Texture2D" uid="uid://511khreutwrx" path="res://Not_Enough_Time_Game_Jam/Sprites/mica_idle.png" id="3_1uso1"]
+
+[resource]
+script = ExtResource("2_njign")
+title = "Mica"
+icon = ExtResource("1_p6qhe")
+texture = ExtResource("3_1uso1")
+agility = 17
+metadata/_custom_type_script = "uid://uj6qckvscgx3"
