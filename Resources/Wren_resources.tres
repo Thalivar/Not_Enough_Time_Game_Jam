@@ -9,5 +9,5 @@ script = ExtResource("2_cpwio")
 title = "Wren"
 icon = ExtResource("1_8nlin")
 texture = ExtResource("3_uxq3l")
-agility = 0
+agility = 12
 metadata/_custom_type_script = "uid://uj6qckvscgx3"
