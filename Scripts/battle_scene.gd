@@ -3,6 +3,7 @@ extends Node2D
 @export var player_group : Node2D  # Reference to the parent node containing player characters
 @export var enemy_group : Node2D # Reference to the parent node containing enemy characters
 @export var timeline : HBoxContainer  # UI container for displaying the timeline slots
+@export var options : VBoxContainer
 
 var sorted_array = []  # Stores sorted timeline entries (players + their time values)
 var players : Array[Character]  # Array of all player characters in the scene
@@ -16,6 +17,30 @@ func _ready():
 	# Initialize enemy array
 	for enemy in enemy_group.get_children():
 		enemies.append(enemy.character) # add enemies to array
+	
+	# Create a timeline container if it doesn't exist
+	if timeline == null:
+		print("Timeline not assigned. Creating a default one.")
+		# Create a new HBoxContainer for the timeline
+		timeline = HBoxContainer.new()
+		timeline.name = "Timeline"
+		timeline.custom_minimum_size = Vector2(800, 80)
+		timeline.position = Vector2(240, 40)
+		$UI.add_child(timeline)
+		
+		# Add 6 timeline slots
+		for i in range(6):
+			var slot = Panel.new()
+			slot.custom_minimum_size = Vector2(80, 80)
+			timeline.add_child(slot)
+			
+			var texture_rect = TextureRect.new()
+			texture_rect.name = "TextureRect"
+			texture_rect.expand_mode = 1
+			texture_rect.stretch_mode = 4
+			texture_rect.size = Vector2(64, 64)
+			texture_rect.position = Vector2(8, 8)
+			slot.add_child(texture_rect)
 	
 	sort_and_display()  # Initial timeline render
 	
@@ -51,6 +76,16 @@ func update_timeline():
 	if sorted_array.size() == 0:
 		return
 	
+	# Safe check for timeline
+	if timeline == null or not is_instance_valid(timeline):
+		print("Timeline is null or invalid. Skipping update.")
+		return
+		
+	# Safe check for timeline children
+	if timeline.get_child_count() == 0:
+		print("Timeline has no slots. Skipping update.")
+		return
+	
 	# Iterate through timeline UI slots and assign icons
 	var index = 0
 	for slot in timeline.get_children():
@@ -82,7 +117,3 @@ func attack():
 func next_attack():
 	attack()   # Execute attack
 	pop_out()  # Update queue
-
-
-func _on_mica_child_entered_tree(node: Node) -> void:
-	pass # Replace with function body.

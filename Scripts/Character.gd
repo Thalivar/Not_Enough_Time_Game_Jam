@@ -15,10 +15,16 @@ class_name Character
 		queue_reset()  # Reset action queue when agility changes
 
 # Internal properties
-var speed : float                  # Movement speed (derived from agility)
-var queue : Array[float]          # Action queue (stores time values for turns)
-var status = 1                    # Status multiplier (e.g., 1 = normal, 0.5 = slowed)
-var node                          # Reference to the character's scene node
+var speed : float = 100.0           # Default speed if agility doesn't set it
+var queue : Array[float] = []       # Action queue (stores time values for turns)
+var status = 1                      # Status multiplier (e.g., 1 = normal, 0.5 = slowed)
+var node                            # Reference to the character's scene node
+
+func _init():
+	# Initialize speed and queue on creation
+	if agility > 0:
+		speed = 200.0 / (log(agility) + 2) - 25
+	queue_reset()
 
 # Resets/initializes the action queue with time values
 func queue_reset():
@@ -55,5 +61,9 @@ func attack(tree):
 
 # Remove oldest queue entry and add a new future turn
 func pop_out():
-	queue.pop_front()
-	queue.append(queue[-1] + speed * status)
+	if queue.size() > 0:
+		queue.pop_front()
+		queue.append(queue[-1] + speed * status)
+	else:
+		# Regenerate queue if it's empty
+		queue_reset()

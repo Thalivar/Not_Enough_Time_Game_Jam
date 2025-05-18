@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://ckf8roxxialtd"]
 
-[ext_resource type="Texture2D" uid="uid://cryvnnq4rv8ma" path="res://Sprites/Placeholder enemy.webp" id="1_371ho"]
+[ext_resource type="Texture2D" uid="uid://5x4cj5p2yop5" path="res://Sprites/dominoeffect.png" id="1_mf8n1"]
 [ext_resource type="Script" uid="uid://uj6qckvscgx3" path="res://Scripts/Character.gd" id="2_i6wdd"]
 
 [resource]
 script = ExtResource("2_i6wdd")
-title = "Enemy placegolder"
-icon = ExtResource("1_371ho")
-texture = ExtResource("1_371ho")
+title = "Dominoeffect"
+icon = ExtResource("1_mf8n1")
+texture = ExtResource("1_mf8n1")
 agility = 12
 metadata/_custom_type_script = "uid://uj6qckvscgx3"
