@@ -47,5 +47,13 @@ func attack(tree):
 	if node.position.x < node.get_viewport_rect().size.x / 2:
 		shift = -shift
 	
-	await tween_movement(-shift, tree)  # Perform the attack movement
-	await tween_movement(shift, tree)
+	# Perform attack movement: dash forward, then return
+	await tween_movement(-shift, tree)  # Dash toward enemy
+	await tween_movement(shift, tree)    # Return to original position
+	
+	EventBus.next_attack.emit()  # Notify system to proceed to next attack
+
+# Remove oldest queue entry and add a new future turn
+func pop_out():
+	queue.pop_front()
+	queue.append(queue[-1] + speed * status)

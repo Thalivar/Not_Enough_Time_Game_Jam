@@ -13,3 +13,12 @@ config_version=5
 config/name="Game Jam"
 run/main_scene="uid://dfxmtqhgos0cs"
 config/features=PackedStringArray("4.4", "Forward Plus")
+
+[autoload]
+
+EventBus="*res://Scenes/event_bus.tscn"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=800

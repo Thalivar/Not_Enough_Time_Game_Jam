@@ -4,7 +4,7 @@ func _ready() -> void:
 	pass
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://battle_scene.tscn") #Replace with file of the main game
+	get_tree().change_scene_to_file("res://Scenes/battle_scene.tscn") #Replace with file of the main game
 
 
 func _on_options_pressed() -> void:

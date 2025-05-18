@@ -1,6 +1,5 @@
 extends Sprite2D
 
-
 @export var character : Character  # Reference to the Character resource
 
 func _ready():  # Fixed typo: "__ready" → "_ready"

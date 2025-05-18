@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dfxmtqhgos0cs"]
 
-[ext_resource type="Script" uid="uid://bnbc7eewb6fef" path="res://Not_Enough_Time_Game_Jam/main_menu.gd" id="1_uaqad"]
+[ext_resource type="Script" uid="uid://bnbc7eewb6fef" path="res://Scripts/main_menu.gd" id="1_uaqad"]
 
 [sub_resource type="Theme" id="Theme_so0i5"]
 
