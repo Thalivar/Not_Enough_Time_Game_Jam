@@ -98,6 +98,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="EnemySelection" type="VBoxContainer" parent="UI"]
+unique_name_in_owner = true
 visible = false
 offset_right = 40.0
 
