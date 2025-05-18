@@ -143,23 +143,21 @@ character = ExtResource("5_ed262")
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Enemy" type="Sprite2D" parent="Enemies"]
-visible = false
-position = Vector2(768.001, 320)
+position = Vector2(1016, 568)
 scale = Vector2(0.1, 0.1)
 offset = Vector2(-767.4, -319.702)
 script = ExtResource("2_gt16y")
 character = ExtResource("6_gt16y")
 
 [node name="Enemy2" type="Sprite2D" parent="Enemies"]
-visible = false
-position = Vector2(896.001, 320)
+position = Vector2(888, 456)
 scale = Vector2(0.2, 0.2)
 offset = Vector2(-895.3, -319.698)
 script = ExtResource("2_gt16y")
 character = ExtResource("6_gt16y")
 
 [node name="Enemy3" type="Sprite2D" parent="Enemies"]
-position = Vector2(1024, 320)
+position = Vector2(1024, 384)
 scale = Vector2(0.2, 0.2)
 offset = Vector2(-175.2, -167.698)
 script = ExtResource("2_gt16y")
