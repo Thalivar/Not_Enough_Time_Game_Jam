@@ -7,11 +7,10 @@
 [ext_resource type="Resource" uid="uid://cd766lmw3s7mf" path="res://Resources/Wren_resources.tres" id="5_ed262"]
 [ext_resource type="Resource" uid="uid://ckf8roxxialtd" path="res://Resources/Enemy_placeholder.tres" id="6_gt16y"]
 
-[node name="BattleScene" type="Node2D" node_paths=PackedStringArray("player_group", "enemy_group", "timeline")]
+[node name="BattleScene" type="Node2D" node_paths=PackedStringArray("player_group", "enemy_group")]
 script = ExtResource("1_3gnqe")
 player_group = NodePath("Players")
 enemy_group = NodePath("Enemies")
-timeline = NodePath("")
 
 [node name="UI" type="CanvasLayer" parent="."]
 

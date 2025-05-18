@@ -1,13 +1,13 @@
-extends CanvasLayer
+extends CanvasLayer # works from the first layer(UI)
 
-func _ready() -> void:
+func _ready() -> void:#what is this supposed to replaced with?
 	pass
 
-func _on_play_pressed() -> void:
+func _on_play_pressed() -> void: #starts the game
 	get_tree().change_scene_to_file("res://Scenes/battle_scene.tscn") #Replace with file of the main game
 
 
-func _on_options_pressed() -> void:
+func _on_options_pressed() -> void: 
 	get_tree().change_scene_to_file("res://Not_Enough_Time_Game_Jam/TempFile") #Replace with file of the options
 
 
