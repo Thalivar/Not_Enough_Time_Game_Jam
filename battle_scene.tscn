@@ -129,20 +129,23 @@ stretch_mode = 4
 position = Vector2(0.000781298, 1.49012e-08)
 
 [node name="Cian" type="Sprite2D" parent="Players"]
-position = Vector2(127.999, 320)
+position = Vector2(127.999, 416)
+scale = Vector2(0.3, 0.3)
 offset = Vector2(-127.9, -319.698)
 script = ExtResource("1_ytmqc")
 character = ExtResource("3_ab466")
 
 [node name="Mica" type="Sprite2D" parent="Players"]
-position = Vector2(255.999, 320)
+position = Vector2(319.999, 416)
+scale = Vector2(0.3, 0.3)
 offset = Vector2(-255.8, -319.698)
 script = ExtResource("1_ytmqc")
 character = ExtResource("4_crnst")
 
 [node name="Wren" type="Sprite2D" parent="Players"]
 position = Vector2(383.999, 320)
-offset = Vector2(-383.7, -319.7)
+scale = Vector2(0.3, 0.3)
+offset = Vector2(16.3, -15.7)
 script = ExtResource("1_ytmqc")
 character = ExtResource("5_ggoib")
 
@@ -161,5 +164,5 @@ script = ExtResource("1_ytmqc")
 
 [node name="Enemy3" type="Sprite2D" parent="Enemies"]
 position = Vector2(1024, 320)
-offset = Vector2(-1023.2, -319.698)
+offset = Vector2(-175.2, -167.698)
 script = ExtResource("1_ytmqc")
