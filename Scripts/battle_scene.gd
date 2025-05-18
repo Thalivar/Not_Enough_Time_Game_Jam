@@ -4,6 +4,7 @@ extends Node2D
 @export var enemy_group : Node2D # Reference to the parent node containing enemy characters
 @export var timeline : HBoxContainer  # UI container for displaying the timeline slots
 @export var options : VBoxContainer
+@export var enemy_button : PackedScene
 
 var sorted_array = []  # Stores sorted timeline entries (players + their time values)
 var players : Array[Character]  # Array of all player characters in the scene
@@ -17,6 +18,10 @@ func _ready():
 	# Initialize enemy array
 	for enemy in enemy_group.get_children():
 		enemies.append(enemy.character) # add enemies to array
+		
+		var button = enemy_button.instantiate()
+		button.character = enemy.character
+		%EnemySelection.add_child(button)
 	
 	# Create a timeline container if it doesn't exist
 	if timeline == null:
@@ -103,6 +108,8 @@ func update_timeline():
 func sort_and_display():
 	sort_combined_queue()
 	update_timeline()
+	if sorted_array[0]["character"] in players:
+		show_options()
 
 # Process the current attack and update timeline
 func pop_out():
@@ -115,5 +122,16 @@ func attack():
 
 # Attack sequence handler (connected to EventBus)
 func next_attack():
+	if sorted_array[0]["character"] in players:
+		return
 	attack()   # Execute attack
 	pop_out()  # Update queue
+	
+func show_options():
+	options.show()
+	options.get_child(0).grab_focus()
+
+func choose_enemy():
+	%EnemySelection.show()
+	%EnemySelection.grab_child(0).grab_focus()
+	
