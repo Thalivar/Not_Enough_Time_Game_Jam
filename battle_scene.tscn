@@ -1,16 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://cvq7vqikr5kgk"]
+[gd_scene load_steps=6 format=3 uid="uid://cvq7vqikr5kgk"]
 
-[ext_resource type="Script" uid="uid://d1hhkkguyhusb" path="res://Not_Enough_Time_Game_Jam/battle_scene.gd" id="1_euk8r"]
-[ext_resource type="Script" uid="uid://dopqt58k4711a" path="res://Not_Enough_Time_Game_Jam/Character_Sprite.gd" id="1_ytmqc"]
-[ext_resource type="Texture2D" uid="uid://duew05j8cdfbp" path="res://Not_Enough_Time_Game_Jam/Sprites/cian_idle.png" id="2_gsur4"]
-[ext_resource type="Resource" uid="uid://v5jj5yrygvjd" path="res://Not_Enough_Time_Game_Jam/Resources/Cian_resources.tres" id="3_ab466"]
-[ext_resource type="Resource" uid="uid://g33x6qhlr4g0" path="res://Not_Enough_Time_Game_Jam/Resources/Mica_resources.tres" id="4_crnst"]
-[ext_resource type="Resource" uid="uid://cd766lmw3s7mf" path="res://Not_Enough_Time_Game_Jam/Resources/Wren_resources.tres" id="5_ggoib"]
-[ext_resource type="Texture2D" uid="uid://511khreutwrx" path="res://Not_Enough_Time_Game_Jam/Sprites/mica_idle.png" id="5_jy6u7"]
-[ext_resource type="Texture2D" uid="uid://b7s0c8ndv07c3" path="res://Not_Enough_Time_Game_Jam/Sprites/wren_idle.png" id="7_7s5tq"]
+[ext_resource type="Script" uid="uid://d1hhkkguyhusb" path="res://battle_scene.gd" id="1_euk8r"]
+[ext_resource type="Script" uid="uid://dopqt58k4711a" path="res://Character_Sprite.gd" id="1_ytmqc"]
+[ext_resource type="Resource" uid="uid://v5jj5yrygvjd" path="res://Resources/Cian_resources.tres" id="3_ab466"]
+[ext_resource type="Resource" uid="uid://g33x6qhlr4g0" path="res://Resources/Mica_resources.tres" id="4_crnst"]
+[ext_resource type="Resource" uid="uid://cd766lmw3s7mf" path="res://Resources/Wren_resources.tres" id="5_ggoib"]
 
 [node name="BattleScene" type="Node2D" node_paths=PackedStringArray("player_group", "timeline")]
-scale = Vector2(1280, 1280)
 script = ExtResource("1_euk8r")
 player_group = NodePath("Players")
 timeline = NodePath("UI/Timeline")
@@ -133,20 +129,20 @@ stretch_mode = 4
 position = Vector2(0.000781298, 1.49012e-08)
 
 [node name="Cian" type="Sprite2D" parent="Players"]
-position = Vector2(0.0992187, 0.301562)
-texture = ExtResource("2_gsur4")
+position = Vector2(127.999, 320)
+offset = Vector2(-127.9, -319.698)
 script = ExtResource("1_ytmqc")
 character = ExtResource("3_ab466")
 
 [node name="Mica" type="Sprite2D" parent="Players"]
-position = Vector2(0.199219, 0.301562)
-texture = ExtResource("5_jy6u7")
+position = Vector2(255.999, 320)
+offset = Vector2(-255.8, -319.698)
 script = ExtResource("1_ytmqc")
 character = ExtResource("4_crnst")
 
 [node name="Wren" type="Sprite2D" parent="Players"]
-position = Vector2(0.299219, 0.3)
-texture = ExtResource("7_7s5tq")
+position = Vector2(383.999, 320)
+offset = Vector2(-383.7, -319.7)
 script = ExtResource("1_ytmqc")
 character = ExtResource("5_ggoib")
 
@@ -154,13 +150,16 @@ character = ExtResource("5_ggoib")
 position = Vector2(-0.000781246, 0)
 
 [node name="Enemy" type="Sprite2D" parent="Enemies"]
-position = Vector2(0.600781, 0.298438)
+position = Vector2(768.001, 320)
+offset = Vector2(-767.4, -319.702)
 script = ExtResource("1_ytmqc")
 
 [node name="Enemy2" type="Sprite2D" parent="Enemies"]
-position = Vector2(0.700781, 0.301562)
+position = Vector2(896.001, 320)
+offset = Vector2(-895.3, -319.698)
 script = ExtResource("1_ytmqc")
 
 [node name="Enemy3" type="Sprite2D" parent="Enemies"]
-position = Vector2(0.800781, 0.301562)
+position = Vector2(1024, 320)
+offset = Vector2(-1023.2, -319.698)
 script = ExtResource("1_ytmqc")

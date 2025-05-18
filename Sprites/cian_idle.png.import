@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duew05j8cdfbp"
-path="res://.godot/imported/cian_idle.png-d862b14d3c5815e4f08248664235fa09.ctex"
+path="res://.godot/imported/cian_idle.png-a110c21a009688cc206e4a8ff27bac87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Not_Enough_Time_Game_Jam/Sprites/cian_idle.png"
-dest_files=["res://.godot/imported/cian_idle.png-d862b14d3c5815e4f08248664235fa09.ctex"]
+source_file="res://Sprites/cian_idle.png"
+dest_files=["res://.godot/imported/cian_idle.png-a110c21a009688cc206e4a8ff27bac87.ctex"]
 
 [params]
 

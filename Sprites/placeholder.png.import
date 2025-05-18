@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://de38hris4r3ck"
-path="res://.godot/imported/placeholder.png-571b644f0ecc986e321f7bd3a9110a20.ctex"
+path="res://.godot/imported/placeholder.png-7627034f1270dc506da91a2e2c9ef774.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Not_Enough_Time_Game_Jam/Sprites/placeholder.png"
-dest_files=["res://.godot/imported/placeholder.png-571b644f0ecc986e321f7bd3a9110a20.ctex"]
+source_file="res://Sprites/placeholder.png"
+dest_files=["res://.godot/imported/placeholder.png-7627034f1270dc506da91a2e2c9ef774.ctex"]
 
 [params]
 

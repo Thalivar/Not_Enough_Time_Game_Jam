@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://511khreutwrx"
-path="res://.godot/imported/mica_idle.png-7f97a2a662e12274365758585fc797df.ctex"
+path="res://.godot/imported/mica_idle.png-e748ac9e8aaf4b64411cf7347dbeb1df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Not_Enough_Time_Game_Jam/Sprites/mica_idle.png"
-dest_files=["res://.godot/imported/mica_idle.png-7f97a2a662e12274365758585fc797df.ctex"]
+source_file="res://Sprites/mica_idle.png"
+dest_files=["res://.godot/imported/mica_idle.png-e748ac9e8aaf4b64411cf7347dbeb1df.ctex"]
 
 [params]
 
