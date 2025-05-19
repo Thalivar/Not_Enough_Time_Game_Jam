@@ -1,3 +1,5 @@
 [gd_scene format=3 uid="uid://dnqu6yxu67cf3"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="CanvasLayer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
