@@ -5,6 +5,7 @@ class_name Character
 @export var title : String          # Character's name/identifier
 @export var icon : Texture2D       # Small icon for UI (e.g., timeline)
 @export var texture : Texture2D    # Main sprite texture
+@export var max_timeforce : int = 100
 
 # Agility stat (modifies speed and resets queue when changed)
 @export var agility : int:
@@ -19,6 +20,17 @@ var speed : float = 100.0           # Default speed if agility doesn't set it
 var queue : Array[float] = []       # Action queue (stores time values for turns)
 var status = 1                      # Status multiplier (e.g., 1 = normal, 0.5 = slowed)
 var node                            # Reference to the character's scene node
+var current_timeforce := max_timeforce:
+	set(value):
+		current_timeforce = clamp(value, 0, max_timeforce)
+		timeforce_changed.emit(current_timeforce, max_timeforce)
+		if current_timeforce <= 0:
+			character_died.emit()
+			
+signal timeforce_changed(current: float, max: float)
+signal character_died
+
+var is_player : bool = false
 
 func _init():
 	# Initialize speed and queue on creation
@@ -67,3 +79,25 @@ func pop_out():
 	else:
 		# Regenerate queue if it's empty
 		queue_reset()
+	
+func take_damage(amount: int):
+	current_timeforce -= amount
+	if current_timeforce < 0:
+		current_timeforce = 0
+	EventBus.time_force_changed.emit(self)
+	
+	if current_timeforce <= 0:
+		EventBus.character_died.emit(self)
+
+func restore_time_force(amount: int):
+	current_timeforce += amount
+	if current_timeforce > max_timeforce:
+		current_timeforce = max_timeforce
+	EventBus.time_force_changed.emit(self)
+
+func use_ability_force(amount: int) -> bool:
+	if current_timeforce >= amount:
+		current_timeforce -= amount
+		EventBus.time_force_changed.emit(self)
+		return true
+	return false
