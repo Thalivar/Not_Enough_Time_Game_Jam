@@ -8,11 +8,11 @@ func _on_play_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
-	get_tree().change_scene_to_file("res://Not_Enough_Time_Game_Jam/TempFile") #Replace with file of the options
+	get_tree().change_scene_to_file("res://Scenes/Options.tscn") 
 
 
-func _on_credits_pressed() -> void:
-	get_tree().change_scene_to_file("res://Not_Enough_Time_Game_Jam/TempFile") #Replace with file of the credits
+func _on_credits_pressed() -> void: #placeholder scene for now
+	get_tree().change_scene_to_file("res://Scenes/credits.tscn") 
 
 
 func _on_quit_pressed() -> void:

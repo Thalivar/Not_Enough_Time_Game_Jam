@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8an85g8uynj3"]
+
+[ext_resource type="Texture2D" uid="uid://k0yx5a0e02vh" path="res://Resources/Credits.png" id="1_gryuy"]
+[ext_resource type="Script" uid="uid://bhxlslgk6edul" path="res://Scenes/backbutton.gd" id="1_r18jl"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.830827, 0.734387)
+texture = ExtResource("1_gryuy")
+
+[node name="Backbutton" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_right = 45.0
+offset_bottom = 31.0
+scale = Vector2(2.61253, 2.57044)
+text = "Back"
+script = ExtResource("1_r18jl")
+metadata/_edit_use_anchors_ = true
