@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc6k8uug5ftu3"]
+
+[ext_resource type="Script" uid="uid://di5xrql63kbly" path="res://Scenes/time_force_bar.gd" id="1_vs6wc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_re8e3"]
+bg_color = Color(0.125911, 0.125911, 0.125911, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hi4du"]
+bg_color = Color(0.635605, 0.529225, 0.871539, 1)
+
+[node name="Time Force" type="ProgressBar"]
+offset_left = -72.0
+offset_right = 72.0
+offset_bottom = 27.0
+theme_override_styles/background = SubResource("StyleBoxFlat_re8e3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hi4du")
+show_percentage = false
+script = ExtResource("1_vs6wc")
