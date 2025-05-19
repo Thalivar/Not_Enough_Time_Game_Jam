@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_i6wdd")
-title = "Dominoeffect"
+title = "Domino Effect"
 icon = ExtResource("1_mf8n1")
 texture = ExtResource("1_mf8n1")
 agility = 12

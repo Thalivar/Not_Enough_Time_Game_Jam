@@ -4,6 +4,7 @@ extends Node2D
 @export var enemy_group : Node2D # Reference to the parent node containing enemy characters
 @export var timeline : HBoxContainer  # UI container for displaying the timeline slots
 @export var options : VBoxContainer
+@export var enemy_button : PackedScene
 
 var sorted_array = []  # Stores sorted timeline entries (players + their time values)
 var players : Array[Character]  # Array of all player characters in the scene
@@ -17,30 +18,10 @@ func _ready():
 	# Initialize enemy array
 	for enemy in enemy_group.get_children():
 		enemies.append(enemy.character) # add enemies to array
-	
-	# Create a timeline container if it doesn't exist
-	if timeline == null:
-		print("Timeline not assigned. Creating a default one.")
-		# Create a new HBoxContainer for the timeline
-		timeline = HBoxContainer.new()
-		timeline.name = "Timeline"
-		timeline.custom_minimum_size = Vector2(800, 80)
-		timeline.position = Vector2(240, 40)
-		$UI.add_child(timeline)
 		
-		# Add 6 timeline slots
-		for i in range(6):
-			var slot = Panel.new()
-			slot.custom_minimum_size = Vector2(80, 80)
-			timeline.add_child(slot)
-			
-			var texture_rect = TextureRect.new()
-			texture_rect.name = "TextureRect"
-			texture_rect.expand_mode = 1
-			texture_rect.stretch_mode = 4
-			texture_rect.size = Vector2(64, 64)
-			texture_rect.position = Vector2(8, 8)
-			slot.add_child(texture_rect)
+		var button = enemy_button.instantiate()
+		button.character = enemy.character
+		%EnemySelection.add_child(button)
 	
 	sort_and_display()  # Initial timeline render
 	
@@ -103,6 +84,8 @@ func update_timeline():
 func sort_and_display():
 	sort_combined_queue()
 	update_timeline()
+	if sorted_array[0]["character"] in players:
+		show_options()
 
 # Process the current attack and update timeline
 func pop_out():
@@ -115,5 +98,16 @@ func attack():
 
 # Attack sequence handler (connected to EventBus)
 func next_attack():
+	if sorted_array[0]["character"] in players:
+		return
 	attack()   # Execute attack
 	pop_out()  # Update queue
+	
+func show_options():
+	options.show()
+	options.get_child(0).grab_focus()
+
+func choose_enemy():
+	%EnemySelection.show()
+	%EnemySelection.get_child(0).grab_focus()
+	
