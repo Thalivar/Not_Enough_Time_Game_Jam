@@ -48,9 +48,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_so0i5")
 theme_override_constants/outline_size = 0
-theme_override_font_sizes/font_size = 0
-text = "
-Play
+text = "Play
 "
 icon_alignment = 1
 expand_icon = true

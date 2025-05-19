@@ -6,6 +6,10 @@ extends Node2D
 @export var options : VBoxContainer
 @export var enemy_button : PackedScene
 
+@export var battle_duration := 180.0  # 3 minutes by default
+var time_remaining := battle_duration
+var timer_active := false
+
 var sorted_array = []  # Stores sorted timeline entries (players + their time values)
 var players : Array[Character]  # Array of all player characters in the scene
 var enemies : Array[Character] # Array of all enemy characters in the scene

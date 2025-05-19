@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8an85g8uynj3"]
+[gd_scene load_steps=2 format=3 uid="uid://c8an85g8uynj3"]
 
 [ext_resource type="Texture2D" uid="uid://k0yx5a0e02vh" path="res://Resources/Credits.png" id="1_gryuy"]
-[ext_resource type="Script" path="res://Scripts/backbutton.gd" id="1_r18jl"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -20,5 +19,4 @@ offset_right = 45.0
 offset_bottom = 31.0
 scale = Vector2(2.61253, 2.57044)
 text = "Back"
-script = ExtResource("1_r18jl")
 metadata/_edit_use_anchors_ = true
