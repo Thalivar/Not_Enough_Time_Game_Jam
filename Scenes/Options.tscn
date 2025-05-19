@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dnqu6yxu67cf3"]
 
 [ext_resource type="Script" uid="uid://bfxda32jbq826" path="res://Scenes/options.gd" id="1_5hy3q"]
-[ext_resource type="Texture2D" uid="uid://b4a7n7blgxdt2" path="res://Scenes/Option_screen.png" id="1_hg628"]
-[ext_resource type="Script" uid="uid://f6vjn0l5k54s" path="res://Scenes/back_button2.gd" id="1_qqnya"]
+[ext_resource type="Texture2D" uid="uid://b4a7n7blgxdt2" path="res://Sprites/Option_screen.png" id="1_hg628"]
+[ext_resource type="Script" path="res://Scenes/back_button2.gd" id="1_qqnya"]
 
 [node name="CanvasLayer" type="Control"]
 layout_mode = 3

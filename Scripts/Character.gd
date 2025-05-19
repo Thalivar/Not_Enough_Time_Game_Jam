@@ -31,6 +31,7 @@ signal timeforce_changed(current: float, max: float)
 signal character_died
 
 var is_player : bool = false
+var is_dead : bool = false
 
 func _init():
 	# Initialize speed and queue on creation
@@ -81,23 +82,30 @@ func pop_out():
 		queue_reset()
 	
 func take_damage(amount: int):
+	if is_dead:
+		return  # Don't process damage if already dead
+		
 	current_timeforce -= amount
 	if current_timeforce < 0:
 		current_timeforce = 0
-	EventBus.time_force_changed.emit(self)
 	
-	if current_timeforce <= 0:
+	if current_timeforce <= 0 and not is_dead:
+		is_dead = true
 		EventBus.character_died.emit(self)
 
 func restore_time_force(amount: int):
+	if is_dead:
+		return  # Don't restore if dead
+		
 	current_timeforce += amount
 	if current_timeforce > max_timeforce:
 		current_timeforce = max_timeforce
 	EventBus.time_force_changed.emit(self)
 
 func use_ability_force(amount: int) -> bool:
-	if current_timeforce >= amount:
-		current_timeforce -= amount
-		EventBus.time_force_changed.emit(self)
-		return true
-	return false
+	if is_dead or current_timeforce < amount:
+		return false
+		
+	current_timeforce -= amount
+	EventBus.time_force_changed.emit(self)
+	return true

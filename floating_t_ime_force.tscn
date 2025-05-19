@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc8f0ygkbexrf"]
+
+[ext_resource type="Script" uid="uid://cuvp7q0oum18i" path="res://floating_t_ime_force.gd" id="1_oqng4"]
+[ext_resource type="PackedScene" uid="uid://bc6k8uug5ftu3" path="res://Scenes/Time_force_Bar.tscn" id="2_be4oe"]
+
+[node name="Floating_Time_Force" type="Node2D"]
+script = ExtResource("1_oqng4")
+
+[node name="Time Force" parent="." instance=ExtResource("2_be4oe")]

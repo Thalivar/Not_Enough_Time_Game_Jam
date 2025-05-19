@@ -11,7 +11,7 @@
 [ext_resource type="Resource" uid="uid://ckf8roxxialtd" path="res://Resources/DominoEffect_Resources.tres" id="6_gt16y"]
 [ext_resource type="Texture2D" uid="uid://5x4cj5p2yop5" path="res://Sprites/dominoeffect.png" id="9_ms847"]
 [ext_resource type="Script" uid="uid://uj6qckvscgx3" path="res://Scripts/Character.gd" id="10_f4ggb"]
-[ext_resource type="Script" uid="uid://bw4e4gq2ivmm8" path="res://Scenes/exit_button.gd" id="12_wb0gu"]
+[ext_resource type="Script" uid="uid://bw4e4gq2ivmm8" path="res://Scripts/exit_button.gd" id="12_wb0gu"]
 
 [sub_resource type="Resource" id="Resource_wb0gu"]
 script = ExtResource("10_f4ggb")
@@ -58,8 +58,7 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-expand_mode = 1
-stretch_mode = 4
+expand_mode = 5
 
 [node name="TimeLineSlot2" type="Panel" parent="UI/TimeLine"]
 custom_minimum_size = Vector2(80, 80)
@@ -127,9 +126,9 @@ offset_bottom = 688.0
 [node name="Options" type="VBoxContainer" parent="UI"]
 visible = false
 offset_left = 704.0
-offset_top = 704.0
+offset_top = 696.0
 offset_right = 783.0
-offset_bottom = 780.0
+offset_bottom = 772.0
 
 [node name="Attack" type="Button" parent="UI/Options"]
 layout_mode = 2
@@ -138,34 +137,30 @@ text = "Attack
 "
 script = ExtResource("2_20f6w")
 
-[node name="Button" type="Button" parent="UI/Options"]
+[node name="Skills" type="Button" parent="UI/Options"]
 layout_mode = 2
-
-[node name="Button2" type="Button" parent="UI/Options"]
-layout_mode = 2
-
-[node name="Button3" type="Button" parent="UI/Options"]
-layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "Skills"
 
 [node name="Players" type="Node2D" parent="."]
 position = Vector2(0.000781298, 1.49012e-08)
 
 [node name="Cian" type="Sprite2D" parent="Players"]
-position = Vector2(127.999, 560)
+position = Vector2(130.999, 568)
 scale = Vector2(0.3, 0.3)
 offset = Vector2(-127.9, -399.698)
 script = ExtResource("2_gt16y")
 character = ExtResource("3_20f6w")
 
 [node name="Mica" type="Sprite2D" parent="Players"]
-position = Vector2(319.999, 560)
+position = Vector2(319.999, 584)
 scale = Vector2(0.3, 0.3)
 offset = Vector2(-255.801, -399.698)
 script = ExtResource("2_gt16y")
 character = ExtResource("4_w4764")
 
 [node name="Wren" type="Sprite2D" parent="Players"]
-position = Vector2(495.999, 536)
+position = Vector2(495.999, 544)
 scale = Vector2(0.3, 0.3)
 offset = Vector2(-303.701, -255.7)
 script = ExtResource("2_gt16y")
@@ -188,8 +183,10 @@ script = ExtResource("2_gt16y")
 character = ExtResource("6_gt16y")
 
 [node name="Exit Button" type="Button" parent="."]
-offset_right = 115.0
-offset_bottom = 53.0
+offset_left = 16.0
+offset_top = 736.0
+offset_right = 131.0
+offset_bottom = 789.0
 theme_override_font_sizes/font_size = 25
 text = "Exit"
 script = ExtResource("12_wb0gu")
