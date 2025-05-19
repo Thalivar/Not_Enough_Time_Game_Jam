@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bflg8unb8516s"]
 
-[ext_resource type="Script" uid="uid://c044bdifxh0nv" path="res://Scenes/enemy_button.gd" id="1_4fcd6"]
+[ext_resource type="Script" uid="uid://c044bdifxh0nv" path="res://Scripts/enemy_button.gd" id="1_4fcd6"]
 
 [node name="EnemyButton" type="Button"]
 offset_left = 704.0

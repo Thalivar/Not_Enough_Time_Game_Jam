@@ -29,39 +29,58 @@ texture = ExtResource("2_rmbjf")
 
 [node name="Button_Group" type="VBoxContainer" parent="Control"]
 layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 544.0
-offset_top = 288.0
-offset_right = 864.0
-offset_bottom = -40.0
+anchors_preset = -1
+anchor_left = 0.1875
+anchor_top = 0.19
+anchor_right = 0.424974
+anchor_bottom = 0.923848
+offset_left = 248.0
+offset_top = 136.0
+offset_right = 337.034
+offset_bottom = 267.922
+grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.610374, 0.627221)
 
 [node name="Play" type="Button" parent="Control/Button_Group"]
+layout_direction = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_so0i5")
-text = "Play
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 0
+text = "
+Play
 "
+icon_alignment = 1
+expand_icon = true
 
 [node name="Options" type="Button" parent="Control/Button_Group"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_so0i5")
-text = "Options"
+text = "
+Options
+"
+icon_alignment = 1
 
 [node name="Credits" type="Button" parent="Control/Button_Group"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_so0i5")
-text = "Credits"
+text = "Credits
+"
+icon_alignment = 1
+expand_icon = true
 
 [node name="Quit" type="Button" parent="Control/Button_Group"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_so0i5")
-text = "Quit"
+text = "Quit
+"
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="pressed" from="Control/Button_Group/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Control/Button_Group/Options" to="." method="_on_options_pressed"]

@@ -118,17 +118,17 @@ stretch_mode = 4
 [node name="EnemySelection" type="VBoxContainer" parent="UI"]
 unique_name_in_owner = true
 visible = false
-offset_left = 704.0
-offset_top = 576.0
-offset_right = 744.0
-offset_bottom = 576.0
+offset_left = 712.0
+offset_top = 688.0
+offset_right = 752.0
+offset_bottom = 688.0
 
 [node name="Options" type="VBoxContainer" parent="UI"]
 visible = false
 offset_left = 704.0
-offset_top = 664.0
+offset_top = 704.0
 offset_right = 783.0
-offset_bottom = 704.0
+offset_bottom = 780.0
 
 [node name="Attack" type="Button" parent="UI/Options"]
 layout_mode = 2
