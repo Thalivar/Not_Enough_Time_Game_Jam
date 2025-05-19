@@ -171,4 +171,5 @@ func check_battle_end():
 		print("Game Over!")
 		# Return to main menu after a short delay
 		await get_tree().create_timer(2.0).timeout
+		MusicManager.play_menu_music()
 		get_tree().change_scene_to_file("res://Scenes/Main_Menu.tscn")
