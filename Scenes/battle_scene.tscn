@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cyepsikcyup4h"]
+[gd_scene load_steps=14 format=3 uid="uid://cyepsikcyup4h"]
 
 [ext_resource type="Script" uid="uid://d1hhkkguyhusb" path="res://Scripts/battle_scene.gd" id="1_3gnqe"]
 [ext_resource type="Script" uid="uid://8bpwnt2cgac7" path="res://Scripts/attack.gd" id="2_20f6w"]
@@ -11,8 +11,7 @@
 [ext_resource type="Resource" uid="uid://ckf8roxxialtd" path="res://Resources/DominoEffect_Resources.tres" id="6_gt16y"]
 [ext_resource type="Texture2D" uid="uid://5x4cj5p2yop5" path="res://Sprites/dominoeffect.png" id="9_ms847"]
 [ext_resource type="Script" uid="uid://uj6qckvscgx3" path="res://Scripts/Character.gd" id="10_f4ggb"]
-[ext_resource type="Script" uid="uid://ct3dpb7kguw8" path="res://Scenes/button.gd" id="12_wb0gu"]
-[ext_resource type="PackedScene" uid="uid://de3tyuieqqtdi" path="res://Scenes/button_2.tscn" id="13_84vmf"]
+[ext_resource type="Script" uid="uid://bw4e4gq2ivmm8" path="res://Scenes/exit_button.gd" id="12_wb0gu"]
 
 [sub_resource type="Resource" id="Resource_wb0gu"]
 script = ExtResource("10_f4ggb")
@@ -188,13 +187,11 @@ offset = Vector2(-175.2, -167.698)
 script = ExtResource("2_gt16y")
 character = ExtResource("6_gt16y")
 
-[node name="Button" type="Button" parent="."]
+[node name="Exit Button" type="Button" parent="."]
 offset_right = 115.0
 offset_bottom = 53.0
 theme_override_font_sizes/font_size = 25
 text = "Exit"
 script = ExtResource("12_wb0gu")
-
-[node name="Button2" parent="." instance=ExtResource("13_84vmf")]
 
 [connection signal="pressed" from="UI/Options/Attack" to="UI/Options/Attack" method="_on_pressed"]

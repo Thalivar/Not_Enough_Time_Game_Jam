@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cr61ngfv008fi"]
 
-[ext_resource type="AudioStream" uid="uid://biuywcemeousl" path="res://Music/Roguelite Exploration Theme.wav" id="1_7da36"]
+[ext_resource type="AudioStream" uid="uid://biuywcemeousl" path="res://Scenes/Roguelite Exploration Theme.wav" id="1_7da36"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 stream = ExtResource("1_7da36")
