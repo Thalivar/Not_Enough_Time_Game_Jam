@@ -1,5 +1,45 @@
-[gd_scene format=3 uid="uid://dnqu6yxu67cf3"]
+[gd_scene load_steps=4 format=3 uid="uid://dnqu6yxu67cf3"]
+
+[ext_resource type="Script" uid="uid://bfxda32jbq826" path="res://Scenes/options.gd" id="1_5hy3q"]
+[ext_resource type="Texture2D" uid="uid://b4a7n7blgxdt2" path="res://Scenes/Option_screen.png" id="1_hg628"]
+[ext_resource type="Script" uid="uid://f6vjn0l5k54s" path="res://Scenes/back_button2.gd" id="1_qqnya"]
 
 [node name="CanvasLayer" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_5hy3q")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1279.0
+offset_bottom = 794.0
+texture = ExtResource("1_hg628")
+
+[node name="back button" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_right = 129.0
+offset_bottom = 79.0
+text = "Back"
+script = ExtResource("1_qqnya")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 549.0
+offset_top = 391.0
+offset_right = 765.0
+offset_bottom = 468.0
+theme_override_font_sizes/font_size = 35
+text = "Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 423.0
+offset_top = 414.0
+offset_right = 902.0
+offset_bottom = 630.0
+min_value = -30.0
+max_value = 0.0
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://biuywcemeousl"
-path="res://.godot/imported/Roguelite Exploration Theme.wav-bf7d4cbbfc67ab18fbf7d34f9bf1a043.sample"
+path="res://.godot/imported/Roguelite Exploration Theme.wav-46496e6d3f12edc60b1aefde76a41666.sample"
 
 [deps]
 
-source_file="res://Music/Roguelite Exploration Theme.wav"
-dest_files=["res://.godot/imported/Roguelite Exploration Theme.wav-bf7d4cbbfc67ab18fbf7d34f9bf1a043.sample"]
+source_file="res://Scenes/Roguelite Exploration Theme.wav"
+dest_files=["res://.godot/imported/Roguelite Exploration Theme.wav-46496e6d3f12edc60b1aefde76a41666.sample"]
 
 [params]
 
