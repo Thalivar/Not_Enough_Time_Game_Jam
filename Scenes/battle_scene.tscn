@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dopqt58k4711a" path="res://Scripts/Character_Sprite.gd" id="2_gt16y"]
 [ext_resource type="PackedScene" uid="uid://bflg8unb8516s" path="res://Scenes/enemy_button.tscn" id="2_w4764"]
 [ext_resource type="Resource" uid="uid://v5jj5yrygvjd" path="res://Resources/Cian_resources.tres" id="3_20f6w"]
-[ext_resource type="Texture2D" uid="uid://c1t4ft7tfyi6d" path="res://Sprites/Screenshot_2025-05-17_at_10.27.24_PM.png" id="3_f4ggb"]
+[ext_resource type="Texture2D" uid="uid://dr7vn7w3d25ym" path="res://Sprites/bg.png" id="3_f4ggb"]
 [ext_resource type="Resource" uid="uid://g33x6qhlr4g0" path="res://Resources/Mica_resources.tres" id="4_w4764"]
 [ext_resource type="Resource" uid="uid://cd766lmw3s7mf" path="res://Resources/Wren_resources.tres" id="5_ed262"]
 [ext_resource type="Resource" uid="uid://ckf8roxxialtd" path="res://Resources/DominoEffect_Resources.tres" id="6_gt16y"]
@@ -29,11 +29,10 @@ timeline = NodePath("UI/TimeLine")
 options = NodePath("UI/Options")
 enemy_button = ExtResource("2_w4764")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 offset_right = 1232.0
 offset_bottom = 840.0
 texture = ExtResource("3_f4ggb")
-expand_mode = 1
 stretch_mode = 4
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -151,21 +150,21 @@ layout_mode = 2
 position = Vector2(0.000781298, 1.49012e-08)
 
 [node name="Cian" type="Sprite2D" parent="Players"]
-position = Vector2(127.999, 544)
+position = Vector2(127.999, 560)
 scale = Vector2(0.3, 0.3)
 offset = Vector2(-127.9, -399.698)
 script = ExtResource("2_gt16y")
 character = ExtResource("3_20f6w")
 
 [node name="Mica" type="Sprite2D" parent="Players"]
-position = Vector2(319.999, 544)
+position = Vector2(319.999, 560)
 scale = Vector2(0.3, 0.3)
 offset = Vector2(-255.801, -399.698)
 script = ExtResource("2_gt16y")
 character = ExtResource("4_w4764")
 
 [node name="Wren" type="Sprite2D" parent="Players"]
-position = Vector2(495.999, 512)
+position = Vector2(495.999, 536)
 scale = Vector2(0.3, 0.3)
 offset = Vector2(-303.701, -255.7)
 script = ExtResource("2_gt16y")
@@ -174,14 +173,14 @@ character = ExtResource("5_ed262")
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Domino\'s Minion" type="Sprite2D" parent="Enemies"]
-position = Vector2(968, 488)
+position = Vector2(968, 504)
 scale = Vector2(0.2, 0.2)
 offset = Vector2(-895.3, -319.698)
 script = ExtResource("2_gt16y")
 character = SubResource("Resource_wb0gu")
 
 [node name="Domino Effect" type="Sprite2D" parent="Enemies"]
-position = Vector2(1080, 472)
+position = Vector2(1080, 480)
 scale = Vector2(0.25, 0.25)
 offset = Vector2(-175.2, -167.698)
 script = ExtResource("2_gt16y")
